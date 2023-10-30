@@ -2,7 +2,6 @@
 
 namespace Creode\LaravelNovaFolders;
 
-use Creode\LaravelNovaFolders\Commands\LaravelNovaFoldersCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
