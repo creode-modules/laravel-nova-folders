@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Creode\LaravelNovaFolders\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelNovaFoldersCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-nova-folders';
 
     public $description = 'My command';
 
