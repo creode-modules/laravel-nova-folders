@@ -18,8 +18,6 @@ class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-nova-folders')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-nova-folders_table')
-            ->hasCommand(LaravelNovaFoldersCommand::class);
+            ->hasViews();
     }
 }
