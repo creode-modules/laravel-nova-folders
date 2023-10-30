@@ -2,9 +2,9 @@
 
 namespace Creode\LaravelNovaFolders\Tests;
 
+use Creode\LaravelNovaFolders\LaravelNovaFoldersServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Creode\LaravelNovaFolders\LaravelNovaFoldersServiceProvider;
 
 class TestCase extends Orchestra
 {
