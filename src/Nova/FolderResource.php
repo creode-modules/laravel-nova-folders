@@ -3,13 +3,13 @@
 namespace Creode\LaravelNovaFolders\Nova;
 
 use App\Nova\Resource;
+use Creode\LaravelFolderTaxonomy\Models\Folder;
+use Creode\LaravelNovaFolders\Events\DefineFolderActionsEvent;
+use Creode\LaravelNovaFolders\Events\DefineFolderFieldsEvent;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Creode\LaravelFolderTaxonomy\Models\Folder;
-use Creode\LaravelNovaFolders\Events\DefineFolderFieldsEvent;
-use Creode\LaravelNovaFolders\Events\DefineFolderActionsEvent;
-use Laravel\Nova\Fields\BelongsTo;
 
 class FolderResource extends Resource
 {

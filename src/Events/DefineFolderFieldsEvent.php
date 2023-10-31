@@ -9,9 +9,6 @@ class DefineFolderFieldsEvent
      */
     public $fields;
 
-    /**
-     * @param array $fields
-     */
     public function __construct(array $fields)
     {
         $this->fields = $fields;

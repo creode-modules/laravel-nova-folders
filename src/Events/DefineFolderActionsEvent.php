@@ -9,9 +9,6 @@ class DefineFolderActionsEvent
      */
     public $actions;
 
-    /**
-     * @param array $actions
-     */
     public function __construct(array $actions)
     {
         $this->actions = $actions;
