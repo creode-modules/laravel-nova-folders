@@ -2,12 +2,22 @@
 
 namespace Creode\LaravelNovaFolders;
 
-use Creode\LaravelNovaFolders\Commands\LaravelNovaFoldersCommand;
+use Laravel\Nova\Nova;
 use Spatie\LaravelPackageTools\Package;
+use Creode\LaravelNovaFolders\Nova\FolderResource;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
 {
+    public function boot()
+    {
+        parent::boot();
+
+        Nova::resources([
+            FolderResource::class,
+        ]);
+    }
+
     public function configurePackage(Package $package): void
     {
         /*
