@@ -39,6 +39,16 @@ class FolderResource extends Resource
     ];
 
     /**
+     * Overwrites name (label) of resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Folders';
+    }
+
+    /**
      * Get the fields displayed by the resource.
      *
      * @return array
