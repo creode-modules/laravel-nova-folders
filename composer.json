@@ -25,7 +25,7 @@
         "php": "^8.1",
         "creode/laravel-folder-taxonomy": "^1.0",
         "illuminate/contracts": "^10.0",
-        "laravel/nova": "*",
+        "laravel/nova": "^4.28",
         "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
