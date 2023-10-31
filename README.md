@@ -42,9 +42,15 @@ php artisan vendor:publish --tag="nova-folders-views"
 
 ## Usage
 
+Handles the registration of the folders module with Laravel Nova. This module is meant to be used as a base to get basic folder functionality working within Laravel Nova but provides very little functionality on its own.
+
+### Registering Custom Resource Actions
+You can register custom resource actions to appear on the Folder resource. To do this you need to listen for the `DefineFolderActionsEvent` event and add your actions to the `$actions` array. These just use Nova's standard Actions functionality. For details about defining actions please look at the [Nova documentation](https://nova.laravel.com/docs/4.0/actions/defining-actions.html).
+
 ```php
-$laravelNovaFolders = new Creode\LaravelNovaFolders();
-echo $laravelNovaFolders->echoPhrase('Hello, Creode!');
+Event::listen(function (DefineFolderActionsEvent $event) {
+    $event->actions[] = TestActionClass::make();
+});
 ```
 
 ## Testing
