@@ -3,7 +3,6 @@
 namespace Creode\LaravelNovaFolders;
 
 use Creode\LaravelNovaFolders\Nova\FolderResource;
-use Creode\LaravelNovaFolders\Nova\FolderResource;
 use Laravel\Nova\Nova;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
