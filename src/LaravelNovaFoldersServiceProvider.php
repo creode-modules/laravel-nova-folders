@@ -13,6 +13,11 @@ class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
     {
         parent::boot();
 
+        // Publishes the permissions seeder.
+        $this->publishes([
+            __DIR__.'/../database/seeders/FolderRoleAndPermissionSeeder.php' => database_path('seeders/FolderRoleAndPermissionSeeder.php'),
+        ], 'nova-folders-seeders');
+
         Nova::resources([
             FolderResource::class,
         ]);

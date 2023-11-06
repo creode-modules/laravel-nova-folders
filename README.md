@@ -53,6 +53,21 @@ Event::listen(function (DefineFolderActionsEvent $event) {
 });
 ```
 
+## Permissions
+This module exposes a new permission seeder class which will need to be published to your application in order to grant permissions to the new resource. To do this you need to run the following command:
+
+```bash
+php artisan vendor:publish --tag="nova-folders-seeders"
+```
+
+This will create a new `FolderRoleAndPermissionSeeder.php` file within your `database/seeders` directory. This will need to be run in order to grant permissions to the new resource. You can run this by running the following command:
+
+```bash
+php artisan db:seed --class=FolderRoleAndPermissionSeeder
+```
+
+You should now see in your database a collection of permissions and a new role called `folder-manager`. This role will have all the permissions required to manage folders. Before running this, it requires the setup of any tables for the `spatie/laravel-permissions` package. Please see the [documentation](https://spatie.be/docs/laravel-permission/v6/installation-laravel) for more information.
+
 ## Testing
 
 ```bash
