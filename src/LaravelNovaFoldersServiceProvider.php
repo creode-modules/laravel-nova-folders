@@ -2,11 +2,11 @@
 
 namespace Creode\LaravelNovaFolders;
 
-use Laravel\Nova\Nova;
+use Creode\LaravelNovaFolders\Nova\FolderResource;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 use Spatie\LaravelPackageTools\Package;
-use Creode\LaravelNovaFolders\Nova\FolderResource;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
@@ -50,7 +50,7 @@ class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
     public function registerPolicies()
     {
         Gate::guessPolicyNamesUsing(function ($modelClass) {
-            return 'Creode\\LaravelNovaFolders\\Policies\\' . class_basename($modelClass) . 'Policy';
+            return 'Creode\\LaravelNovaFolders\\Policies\\'.class_basename($modelClass).'Policy';
         });
     }
 }

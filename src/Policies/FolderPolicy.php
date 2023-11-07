@@ -3,8 +3,8 @@
 namespace Creode\LaravelNovaFolders\Policies;
 
 use App\Models\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
 use Creode\LaravelFolderTaxonomy\Models\Folder;
+use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class FolderPolicy
