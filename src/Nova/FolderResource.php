@@ -7,7 +7,6 @@ use Creode\CollapsibleRadios\Field\CollapsibleRadios;
 use Creode\LaravelFolderTaxonomy\Models\Folder;
 use Creode\LaravelNovaFolders\Events\DefineFolderActionsEvent;
 use Creode\LaravelNovaFolders\Events\DefineFolderFieldsEvent;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
