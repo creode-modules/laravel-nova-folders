@@ -3,6 +3,7 @@
 namespace Creode\LaravelNovaFolders\Nova;
 
 use App\Nova\Resource;
+use Creode\CollapsibleRadios\Field\CollapsibleRadios;
 use Creode\LaravelFolderTaxonomy\Models\Folder;
 use Creode\LaravelNovaFolders\Events\DefineFolderActionsEvent;
 use Creode\LaravelNovaFolders\Events\DefineFolderFieldsEvent;
@@ -63,7 +64,25 @@ class FolderResource extends Resource
                 ->from('Name')
                 ->separator('-')
                 ->rules('required', 'max:255'),
-            BelongsTo::make('Parent', 'parent', FolderResource::class)->nullable(), // TODO: Show slug.
+            CollapsibleRadios::make('Parent', 'parent_id')
+                ->options(
+                    Folder::all()
+                        ->filter(
+                            function ($option) {
+                                // Filter out the current folder so it can't be parented to itself.
+                                return $option->id !== $this->id;
+                            }
+                        )->map(
+                            function ($model) {
+                                return [
+                                    'label' => $model->name,
+                                    'value' => $model->id,
+                                    'id' => $model->id,
+                                    'parent_id' => $model->parent_id ?: null,
+                                ];
+                            }
+                        )
+                )->nullable(),
         ];
 
         // Trigger an event for adding fields.

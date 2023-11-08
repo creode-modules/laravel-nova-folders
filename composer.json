@@ -23,6 +23,7 @@
     ],
     "require": {
         "php": "^8.1",
+        "creode/collapsible-radios": "^1.0",
         "creode/laravel-folder-taxonomy": "^1.0",
         "creode/permissions-seeder": "^1.0",
         "illuminate/contracts": "^10.0",
