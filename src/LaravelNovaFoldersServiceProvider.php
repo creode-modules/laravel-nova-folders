@@ -20,6 +20,7 @@ class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
             __DIR__.'/../database/seeders/FolderRoleAndPermissionSeeder.php' => database_path('seeders/FolderRoleAndPermissionSeeder.php'),
         ], 'nova-folders-seeders');
 
+        FolderResource::$model = config('nova-folders.model');
         Nova::resources([
             FolderResource::class,
         ]);
@@ -49,8 +50,6 @@ class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
      */
     public function registerPolicies()
     {
-        Gate::guessPolicyNamesUsing(function ($modelClass) {
-            return 'Creode\\LaravelNovaFolders\\Policies\\'.class_basename($modelClass).'Policy';
-        });
+        Gate::policy(config('nova-folders.model'), config('nova-folders.policy'));
     }
 }

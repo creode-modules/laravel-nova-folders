@@ -2,7 +2,6 @@
 
 // config for Creode/LaravelNovaFolders
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Actions
@@ -14,4 +13,28 @@ return [
     */
 
     'default_actions' => [],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Folder Model
+    |--------------------------------------------------------------------------
+    |
+    | The model to be used when creating a folder. This can be any model that
+    | extends the Folder model.
+    |
+    */
+
+    'model' => Creode\LaravelFolderTaxonomy\Models\Folder::class,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Folder Policy
+    |--------------------------------------------------------------------------
+    |
+    | This points to the default Policy class used when checking permissions
+    | for the Folder model.
+    |
+    */
+
+    'policy' => Creode\LaravelNovaFolders\Policies\FolderPolicy::class,
 ];
