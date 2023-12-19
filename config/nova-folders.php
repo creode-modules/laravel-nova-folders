@@ -16,18 +16,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Folder Model
-    |--------------------------------------------------------------------------
-    |
-    | The model to be used when creating a folder. This can be any model that
-    | extends the Folder model.
-    |
-    */
-
-    'model' => Creode\LaravelFolderTaxonomy\Models\Folder::class,
-
-    /*
-    |--------------------------------------------------------------------------
     | Folder Policy
     |--------------------------------------------------------------------------
     |
