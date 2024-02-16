@@ -21,6 +21,7 @@ class LaravelNovaFoldersServiceProvider extends PackageServiceProvider
         ], 'nova-folders-seeders');
 
         FolderResource::$model = config('folder-taxonomy.model');
+        FolderResource::$trafficCop = config('folder-taxonomy.traffic_cop');
         Nova::resources([
             FolderResource::class,
         ]);
